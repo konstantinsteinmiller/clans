@@ -20,7 +20,7 @@ const score = computed(() => {
     :class="{ 'absolute top-2 right-2': position !== 'relative' }"
   )
     div.bangers.text-2xl.text-white.font-bold
-      span.score {{ $t('score') }}: {{ score }}
+      //span.score {{ $t('score') }}: {{ score }}
 </template>
 
 <style scoped lang="sass"></style>

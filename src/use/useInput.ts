@@ -1,7 +1,5 @@
-import { usePlayer } from '@/use/usePlayer.ts'
 import useMatch from '@/use/useMatch.ts'
 
-const { startFlying, stopFlying } = usePlayer()
 const { isGameOver } = useMatch()
 
 // const onLongTouch = () => {
@@ -15,7 +13,6 @@ const { isGameOver } = useMatch()
 const touchstart = (e: TouchEvent) => {
   if (isGameOver.value) return // Prevent input if game is over
   e.preventDefault() // Crucial to prevent browser gestures
-  startFlying()
   console.log('touchstart: ')
 
   // if (!timer) {
@@ -28,7 +25,6 @@ const touchend = (e: TouchEvent) => {
   // if (timer) {
   if (isGameOver.value) return
   e.preventDefault() // Still prevent default
-  stopFlying()
   // clearTimeout(timer)
   //   timer = null
   // }
@@ -40,7 +36,6 @@ const onMouseDown = (e: MouseEvent) => {
   // Only respond to left mouse button (button 0)
   if (e.button === 0) {
     e.preventDefault()
-    startFlying()
   }
 }
 
@@ -48,7 +43,6 @@ const onMouseUp = (e: MouseEvent) => {
   if (isGameOver.value) return
   if (e.button === 0) {
     e.preventDefault()
-    stopFlying()
   }
 }
 
@@ -63,7 +57,6 @@ const onKeyDown = (event: KeyboardEvent) => {
   // Spacebar to trigger flight
   if (event.code === 'Space') {
     event.preventDefault()
-    startFlying()
   }
 }
 const onKeyUp = (event: KeyboardEvent) => {
@@ -71,7 +64,6 @@ const onKeyUp = (event: KeyboardEvent) => {
   // Release spacebar to stop flight
   if (event.code === 'Space') {
     event.preventDefault()
-    stopFlying()
   }
 }
 
