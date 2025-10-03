@@ -12,6 +12,21 @@
 
 import type { ENUM } from '@/types'
 
+export const COLORS: ENUM = {
+  YELLOW: 'yellow',
+  RED: 'red',
+  GREEN: 'green',
+  BLUE: 'blue',
+  BLACK: 'black',
+}
+
+export const LAND: ENUM = {
+  FOREST: 'forest',
+  DESERT: 'desert',
+  MOUNTAIN: 'mountain',
+  PLAIN: 'plain',
+}
+
 export const ENEMY_TYPES: { [s: string]: { width: number; height: number } } = {
   1: {
     width: 48,

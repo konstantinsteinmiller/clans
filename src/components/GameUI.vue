@@ -5,6 +5,7 @@ import GameOverScreen from '@/components/GameOverScreen.vue'
 import useMatch from '@/use/useMatch.ts'
 import useInput from '@/use/useInput'
 import { GAME_HEIGHT, GAME_WIDTH } from '@/utils/constants.ts'
+import { COLORS } from '@/utils/enums.ts'
 import Score from '@/components/atoms/Score.vue'
 
 // Match State
@@ -12,6 +13,7 @@ const { isGameOver, setIsGameOver, restartGame } = useMatch()
 const isGameRunning: Ref<boolean> = ref(true)
 
 const { cleanup } = useInput()
+
 
 // Game Loop Update Function
 const updateGame = (deltaTime: number) => {
