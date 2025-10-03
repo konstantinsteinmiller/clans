@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build-github-master": "vite build --base=/endless-runner/ --outDir=dist",
-    "build-github-develop": "vite build --base=/endless-runner/develop/ --outDir=dist/develop",
+    "build-github-master": "vite build --base=/clans/ --outDir=dist",
+    "build-github-develop": "vite build --base=/clans/develop/ --outDir=dist/develop",
     "validated-build": "vue-tsc -b && vite build",
-    "deploy": "vite build && surge dist/ --domain endless-runner.surge.sh",
+    "deploy": "vite build && surge dist/ --domain clans.surge.sh",
     "preview": "vite preview"
   },
   "dependencies": {
