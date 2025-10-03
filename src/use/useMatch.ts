@@ -151,7 +151,7 @@ const useMatch = () => {
         type: LAND.MOUNTAIN,
       },
       {
-        neighbours: [26, 10, 12, 14, 30],
+        neighbours: [8, 10, 12, 14, 26, 30],
         units: DEFAULT_UNITS,
         type: LAND.DESERT,
       },
