@@ -20,6 +20,46 @@ export const COLORS: ENUM = {
   BLACK: 'black',
 }
 
+// COLORS mapping = {
+//   0: "Rot",
+//   1: "Gelb",
+//   2: "Grün",
+//   3: "Blau",
+//   4: "Schwarz"
+// }
+
+// "color_scores": <colorId, points> {
+//   "0": 10,
+//    "1": 5,
+//     "2": 8,
+//     "3": 12,
+//     "4": 2
+// },
+// "player_village_tokens": <playerId, villagePoints> {
+//   "0": 1,
+//   "1": 0,
+//   "2": 1
+// },
+
+// "current_epoch": 2,
+// "villages_founded_in_epoch": 1,
+// "current_player_id": 0,
+// "player_secret_clans": <playerId, colorId> {
+//   "0": 3,
+//   "1": 1,
+//   "2": 4
+// }
+
+// "num_players": 3,
+//   "board": Array<Array<colorId -> amountColorHuts:number >> [
+//     [
+//       0,
+//       0,
+//       0,
+//       0,
+//       1
+//     ],
+
 export const LAND: ENUM = {
   FOREST: 'forest',
   DESERT: 'desert',

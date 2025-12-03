@@ -7,6 +7,7 @@ import useInput from '@/use/useInput'
 import { GAME_HEIGHT, GAME_WIDTH } from '@/utils/constants.ts'
 import { COLORS } from '@/utils/enums.ts'
 import Score from '@/components/atoms/Score.vue'
+import Background from '@/components/atoms/Background.vue'
 
 // Match State
 const { isGameOver, setIsGameOver, restartGame } = useMatch()
@@ -59,6 +60,7 @@ onUnmounted(() => {
 
     .absolute.top-4.left-4.text-white.text-sm.z-50
     Score
+    Background
 </template>
 
 <style scoped lang="sass">

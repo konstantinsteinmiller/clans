@@ -4,6 +4,7 @@ import glsl from 'vite-plugin-glsl'
 import vueI18n from '@intlify/unplugin-vue-i18n/vite'
 import { fileURLToPath, URL } from 'node:url'
 import ReactivityTransform from '@vue-macros/reactivity-transform/vite'
+import svgLoader from 'vite-svg-loader'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     vue(),
     glsl(),
     ReactivityTransform(),
+    svgLoader(),
     vueI18n({
       compositionOnly: true, // Enable SFC `<i18n>` block support
       runtimeOnly: false,

@@ -1,6 +1,8 @@
 import useMatch from '@/use/useMatch.ts'
+import useClickSelect from '@/use/useClickSelect.ts'
 
 const { isGameOver } = useMatch()
+const { onClick, dragCellId } = useClickSelect()
 
 // const onLongTouch = () => {
 //   startFlying()
@@ -46,6 +48,12 @@ const onMouseUp = (e: MouseEvent) => {
   }
 }
 
+const onMouseOver = (event: KeyboardEvent) => {
+  // console.log('hover: ', event.target)
+  dragCellId.value = (event.target as HTMLElement).dataset.cellId
+  console.log('hover: ', dragCellId.value)
+}
+
 const onContextMenu = (event: any) => {
   event.preventDefault()
 }
@@ -74,6 +82,7 @@ export const useInput = () => {
 
     window.addEventListener('mousedown', onMouseDown, { passive: false })
     window.addEventListener('mouseup', onMouseUp, { passive: false })
+    window.addEventListener('mouseover', onMouseOver, { passive: false })
 
     window.addEventListener('touchstart', touchstart, { passive: false })
     window.addEventListener('touchend', touchend, { passive: false })
@@ -88,6 +97,7 @@ export const useInput = () => {
 
     window.removeEventListener('mousedown', onMouseDown, { passive: false })
     window.removeEventListener('mouseup', onMouseUp, { passive: false })
+    window.removeEventListener('mouseover', onMouseOver, { passive: false })
 
     window.removeEventListener('touchstart', touchstart, { passive: false })
     window.removeEventListener('touchend', touchend, { passive: false })
